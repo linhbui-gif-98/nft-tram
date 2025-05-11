@@ -22,6 +22,12 @@ const Header = ({ walletAddress, onConnectWallet }) => {
                     <Link href="/" className="block md:inline-block mb-4 md:mb-0 hover:text-green-400">Trang chủ</Link>
                     <Link href="/marketplace" className="block md:inline-block mb-4 md:mb-0 hover:text-green-400">Marketplace</Link>
                     <Link href="/my-assets" className="block md:inline-block mb-4 md:mb-0 hover:text-green-400">Tài sản của tôi</Link>
+                    <Link href="#" className="block md:inline-block mb-4 md:mb-0 hover:text-green-400">Hệ thống</Link>
+                    <Link href="#" className="block md:inline-block mb-4 md:mb-0 hover:text-green-400">Hoa hồng</Link>
+
+                    <Link href="#" className="block md:inline-block mb-4 md:mb-0 hover:text-green-400">Lịch sử nạp rút</Link>
+                    <Link href="#" className="block md:inline-block mb-4 md:mb-0 hover:text-green-400">Các gói đầu tư</Link>
+
                     <button onClick={() => setShowWalletModal(true)} className="block md:inline-block bg-[#4E3620] text-white px-4 py-2 rounded-lg mb-4 md:mb-0">
                         {walletAddress ? `Connected: ${walletAddress.slice(0, 6)}...${walletAddress.slice(-4)}` : 'Connect Wallet'}
                     </button>
