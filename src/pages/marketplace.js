@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import dynamic from 'next/dynamic';
 
 const NFTCard = dynamic(() => import('@/components/NFTCard'), { ssr: false });
-export default function Home({ walletAddress, onAssetUpdate }) {
+export default function MarketPlace({ walletAddress, onAssetUpdate }) {
   
     const [nfts, setNFTs] = useState([]);
 
@@ -51,7 +51,6 @@ export default function Home({ walletAddress, onAssetUpdate }) {
 
 return (
     <div className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold mb-4">Danh sách NFT Trầm Hương</h1>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {nfts.map((nft) => (
               <NFTCard key={nft.id} nft={nft} onBuyNow={handleBuyNow} />
